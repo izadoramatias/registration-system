@@ -1,0 +1,104 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.content{
+  height: 100%;
+  backdrop-filter: blur(6px);
+}
+
+.content .formulario{
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-areas: 
+  "titulo titulo"
+  "ls rs"
+  ". btn";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.titulo{
+  grid-area: titulo;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #0085b0;
+}
+
+.formulario section{
+  height: 100%;
+  width: 100%;
+}
+
+.formulario section div{
+  margin-bottom: 10px;
+  position: relative;
+  color: #a3a3a2;
+  font-weight: 600;
+  font-size: 15px;
+
+}
+
+.formulario div input{
+  padding: 4px;
+  height: 45px;
+  width: 65%;
+
+  letter-spacing: 2px;
+  
+  outline: none;
+}
+
+.formulario .labelInput{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 4px;
+  
+  pointer-events: none;
+  transition: .2s;
+}
+
+.formulario input:focus ~ .labelInput,
+.formulario input:valid ~ .labelInput{
+  top: -6px;
+  font-size: 12px;
+  color: dodgerblue;
+}
+
+.left-screen{
+  grid-area: ls;
+}
+
+.right-screen{
+  grid-area: rs;
+}
+
+.formulario .btn-submit,
+.formulario input{
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario .btn-submit{
+  grid-area: btn;
+
+  height: 2.800rem;
+  width: 14rem;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 1.5px;
+
+  background: #28af60;
+  color: white;  
+  transition: filter ease-in .2s;
+  cursor: pointer;
+}
+
+.formulario .btn-submit:hover{
+  filter: brightness(0.8);
+}

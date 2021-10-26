@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/cadastro.css">
+  <link rel="stylesheet" href="styles/global.css">
+  
+</head>
+<body>
+  
+  <div class="container">
+    <div class="content">
+      <form class="formulario">
+        <h3 class="titulo">CADASTRO</h3>
+        <section class="left-screen">
+          <div>
+            <input type="email" id="email-pessoal" name="email-Pessoal" required>
+            <label class="labelInput" for="email-pessoal">Email pessoal</label>
+          </div>
+          
+          <div>
+            <input type="email" id="email" name="email">
+            <label class="labelInput" for="email">Email</label>
+          </div>
+          
+          <div>
+            <input type="text" id="rua" name="rua" >
+            <label class="labelInput" for="rua">Rua</label>
+          </div>
+
+          <div>
+            <input type="text" id="complemento" name="complemento">
+            <label class="labelInput" for="complemento">Complemento</label>
+          </div>
+
+          <div>
+            <input type="text" id="cep" name="cep" required>
+            <label class="labelInput" for="cep">CEP</label>  
+          </div>
+        </section>
+
+        <section class="right-screen">
+          <div>
+            <input type="text" id="name" name="name">
+            <label class="labelInput" for="name">Nome completo</label>
+          </div>
+
+          <div>
+            <input type="tel" id="telefone" name="telefone">
+            <label class="labelInput" for="telefone">Telefone</label>
+          </div>
+          
+          <div>
+            <input type="number" id="numero" name="numero">
+            <label class="labelInput" for="numero">N°</label>
+          </div>
+
+          <div>
+            <input type="text" id="bairro" name="bairro">
+            <label class="labelInput" for="bairro">Bairro</label>
+          </div>
+
+          <div>
+            <input type="text" id="cidade" name="cidade" required>
+            <label class="labelInput" for="cidade">Cidade</label>
+          </div>
+
+          <div>
+            <label>UF</label>
+            <select name="UF" id="uf" required>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+            </select>
+          </div>
+
+        </section>
+        
+        <button type="submit" class="btn-submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <ul class="shapes">
+      <li>
+        <img src="assets/shapes/arco.png" alt="">
+      </li>
+      <li>
+        <img src="assets/shapes/circulo.png" alt="">
+      </li>
+      <li>
+        <img src="assets/shapes/cubo.png" alt="">
+      </li>
+      <li>
+        <img src="assets/shapes/hexagono.png" alt="">
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
