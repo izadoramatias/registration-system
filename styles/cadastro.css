@@ -4,24 +4,24 @@
   box-sizing: border-box;
 }
 
-.content{
+.content {
   height: 100%;
   backdrop-filter: blur(6px);
 }
 
-.content .formulario{
+.content .formulario {
   height: 100%;
   display: grid;
   place-items: center;
-  grid-template-areas: 
-  "titulo titulo"
-  "ls rs"
-  ". btn";
+  grid-template-areas:
+    'titulo titulo'
+    'ls rs'
+    '. btn';
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
 }
 
-.titulo{
+.titulo {
   grid-area: titulo;
 
   font-size: 25px;
@@ -29,64 +29,155 @@
   color: #0085b0;
 }
 
-.formulario section{
+.formulario section {
+  display: grid;
+  place-items: center;
+  
   height: 100%;
   width: 100%;
+
 }
 
-.formulario section div{
+.formulario section div {
   margin-bottom: 10px;
   position: relative;
   color: #a3a3a2;
   font-weight: 600;
   font-size: 15px;
 
+  width: 60%;
 }
 
-.formulario div input{
+.formulario div input {
   padding: 4px;
   height: 45px;
-  width: 65%;
+  width: 100%;
+  border: none;
+  background: none;
+  color: #fff;
 
   letter-spacing: 2px;
-  
+
   outline: none;
 }
 
-.formulario .labelInput{
+.formulario div input::placeholder{
+  color: #fff;
+  transition: color ease .2s;
+
+}
+
+.formulario div:hover > input::placeholder,
+.formulario div:focus-within > input::placeholder{
+  color: #0085b0;
+}
+
+.formulario section > div::after{
+  content: '';
+  height: 2px;
+  width: 0%;
+  background: #0085b0;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  left: 0;
+  bottom: 0;
+
+  transition: width ease .3s;
+}
+
+.formulario section > div:focus-within::after{
+  width: 100%;
+}
+
+.formulario div label {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+}
+
+.formulario .left-screen select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  background-image: none;
+  cursor: pointer;
+    
   padding: 4px;
+  background: #28af60;
+  border-radius: 1.5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+
+  width: 100%;
+  height: 100%;
+}
+.formulario .left-screen .selection{
+  display: flex;
+
+  position: relative;
+  width: 14rem;
+  height: 2.8rem;  
+}
+
+.formulario .left-screen option{
+  border: none;
+  text-align: left;
+}
+
+.formulario .left-screen .selection::after{
+  content: '\25BC';
+  position: absolute;
+  top: 4px;
+  left: 181px;
   
+  z-index: 2;
+  height: 37px;
+  width: 37px;
+  text-align: center;
   pointer-events: none;
-  transition: .2s;
+  border-radius: 0.95px;
+
+  color: #fff;
+  background: #066e31;
+  transition: color .2s;
 }
 
-.formulario input:focus ~ .labelInput,
-.formulario input:valid ~ .labelInput{
-  top: -6px;
-  font-size: 12px;
-  color: dodgerblue;
+.formulario .left-screen .selection:hover::after{
+  color: #28af60;
 }
 
-.left-screen{
+.left-screen {
   grid-area: ls;
 }
 
-.right-screen{
+.right-screen {
   grid-area: rs;
 }
 
+.two-elements-inline{
+  display: flex;
+}
+
+
 .formulario .btn-submit,
-.formulario input{
+.formulario input {
   font-family: 'Poppins', sans-serif;
 }
 
-.formulario .btn-submit{
+.formulario .btn-submit {
   grid-area: btn;
 
-  height: 2.800rem;
+  height: 2.8rem;
   width: 14rem;
   font-size: 15px;
   font-weight: 500;
@@ -94,11 +185,11 @@
   border-radius: 1.5px;
 
   background: #28af60;
-  color: white;  
-  transition: filter ease-in .2s;
+  color: white;
+  transition: filter ease-in 0.2s;
   cursor: pointer;
 }
 
-.formulario .btn-submit:hover{
+.formulario .btn-submit:hover {
   filter: brightness(0.8);
 }
