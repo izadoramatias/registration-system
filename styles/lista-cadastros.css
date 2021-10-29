@@ -8,11 +8,17 @@ body{
   color: #fff;
 }
 
+.container{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+
+}
+
 .content {
   height: 100%;
-  background: rgba(21, 21, 22, 0.533);
-  backdrop-filter: blur(6px);
   cursor: default;
+  overflow: auto;
 }
 
 .tb-head{
@@ -30,17 +36,14 @@ body{
 .tb-head tr th,
 .tb-body tr td{
   padding: 8px;
+  min-width: 12rem;
+  word-break: break-all;
 
-}
 
-.tb-body, .tb-head{
-  border-radius: 10px;
 }
 
 .tb-head table th{
-  width: 20%;
-  word-wrap: break-word;
-  background: rgba(253, 253, 253, 0.376);
+  background: rgba(196, 129, 255, 0.78);
   font-weight: 500;
   font-size: 1rem;
   color: rgb(7, 4, 4);
@@ -49,7 +52,6 @@ body{
 
 .tb-body{
   height: calc(100% - 4rem);
-  overflow-x: auto;
 }
 
 .tb-body table td{

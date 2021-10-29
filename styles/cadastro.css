@@ -13,9 +13,13 @@ body{
   user-select: none;
 }
 
+.container{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
 .content {
   height: 100%;
-  backdrop-filter: blur(6px);
 }
 
 .content .formulario {
@@ -33,9 +37,9 @@ body{
 .titulo {
   grid-area: titulo;
 
-  font-size: 25px;
-  font-weight: 600;
-  color: #0085b0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #961bbe;
 }
 
 .formulario section {
@@ -78,14 +82,14 @@ body{
 
 .formulario div:hover > input::placeholder,
 .formulario div:focus-within > input::placeholder{
-  color: #0085b0;
+  color: #961bbe;
 }
 
 .formulario section > div::after{
   content: '';
   height: 2px;
   width: 0%;
-  background: #0085b0;
+  background: #961bbe;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -120,7 +124,7 @@ body{
   cursor: pointer;
     
   padding: 4px;
-  background: #28af60;
+  background: rgba(196, 129, 255, 0.78);
   border-radius: 1.5px;
   color: #fff;
   font-size: 15px;
@@ -168,12 +172,12 @@ body{
   border-radius: 0.95px;
 
   color: #fff;
-  background: #066e31;
+  background: rgba(155, 84, 218, 0.78);
   transition: color .2s;
 }
 
 .formulario .left-screen .selection:hover::after{
-  color: #28af60;
+  color: rgba(196, 129, 255, 0.78);
 }
 
 .left-screen {
@@ -204,7 +208,7 @@ body{
   border: none;
   border-radius: 1.5px;
 
-  background: #28af60;
+  background: rgba(196, 129, 255, 0.78);
   color: white;
   transition: filter ease-in 0.2s;
   cursor: pointer;
@@ -213,3 +217,25 @@ body{
 .formulario .btn-submit:hover {
   filter: brightness(0.8);
 }
+
+/* MEDIA QUERY:  < 925px */
+@media (max-width: 925px){
+
+  .content .formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: auto;
+  }
+
+  .formulario section{
+    height: max-content;
+  }
+
+  .formulario input{
+    margin-bottom: 4px;
+  }
+
+}
+
