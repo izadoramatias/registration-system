@@ -30,9 +30,13 @@ function getApiEficazInfos() {
         tdTel.innerText = data[item].telefone
         tr.append(tdTel);
 
-        const tdAction = document.createElement('td')
-        tdAction.innerText = 'Ação'
+
+        const deleteButton = "<button class='change-button'>Excluir</button>";
+        const changeButton = "<button class='delete-button'>Alterar</button>";
+        const tdAction = document.createElement('td');
+        tdAction.innerHTML = `${deleteButton} ${changeButton}`;
         tr.append(tdAction)
+        
       }
     });
 };
