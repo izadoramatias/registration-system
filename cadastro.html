@@ -19,7 +19,7 @@
   <body>
     <div class="container">
       <div class="content">
-        <form class="formulario">
+        <form id="formulario" class="formulario">
           <h3 class="titulo">CADASTRO</h3>
           <section class="left-screen">
             <div>
@@ -67,6 +67,7 @@
                 id="cep"
                 name="cep"
                 placeholder="CEP"
+                data-mask="00000-000"
                 required
               />
               <label class="labelInput" for="cep">CEP</label>
@@ -122,10 +123,11 @@
 
             <div>
               <input
-                type="tel"
+                type="text"
                 id="telefone"
                 name="telefone"
                 placeholder="Celular"
+                data-mask="(00) 00000-0000"
                 required
               />
               <label class="labelInput" for="telefone">Telefone</label>
@@ -164,11 +166,23 @@
             </div>
           </section>
 
-          <button pnclick="registerUser()" type="submit" class="btn-submit">Cadastrar</button>
+          <button id="btn-submit" type="submit" class="btn-submit">Cadastrar</button>
         </form>
+
+        <div class="modal" id="modal">
+          <div class="check">
+            <span></span>
+          </div>
+          <p>Cadastro realizado
+            <br/>com sucesso</p>
+        </div>
+
       </div>
     </div>
 
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery.mask.js"></script>
     <script src="./scripts/script.js"></script>
+
   </body>
 </html>

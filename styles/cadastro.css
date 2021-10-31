@@ -20,6 +20,8 @@ body{
 
 .content {
   height: 100%;
+  position: relative;
+
 }
 
 .content .formulario {
@@ -192,10 +194,16 @@ body{
   display: flex;
 }
 
-
 .formulario .btn-submit,
 .formulario input {
   font-family: 'Poppins', sans-serif;
+}
+
+.formulario input#numero::-webkit-outer-spin-button,
+.formulario input#numero::-webkit-inner-spin-button{
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .formulario .btn-submit {
@@ -218,6 +226,68 @@ body{
   filter: brightness(0.8);
 }
 
+.modal{
+  background: #fff;
+  border-radius: 2px;
+  color: #42eb72;
+
+  height: 100%;
+  max-height: 300px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  
+  visibility: hidden;
+  transition: 0.7s;
+}
+
+.modal .check{
+  height: 70px;
+  width: 70px;
+  clip-path: circle();
+  margin-bottom:20px;
+
+  position: relative;
+  background: #42eb72;
+  display: grid;
+
+}
+
+.modal .check span{
+  content: '';
+  position: absolute;
+  left: 46.4%;
+  top: 20%;
+  height: 40px;
+  width: 10px;
+  transform: rotate(48deg);
+  border-radius: 20px 20px 20px 10px;
+  background: #fff;
+  transition: .4s
+}
+
+.modal .check span::before{
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 57%;
+  height: 25px;
+  width: 10px;
+  transform: rotate(-90deg);
+  border-radius: 20px 20px 0 10px;
+  background: #fff;
+  
+}
 /* MEDIA QUERY:  < 925px */
 @media (max-width: 925px){
 
@@ -236,6 +306,5 @@ body{
   .formulario input{
     margin-bottom: 4px;
   }
-
 }
 
