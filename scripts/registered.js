@@ -10,35 +10,33 @@ function getApiEficazInfos() {
         const takeParent = document.querySelector('#parent')
         const tr = document.createElement('tr')
         tr.innerText = ''
-        takeParent.append(tr);
+        takeParent.append(tr)
 
         const tdNome = document.createElement('td')
         tdNome.innerText = data[item].nome
-        tr.append(tdNome);
+        tr.append(tdNome)
 
         const tdEmail = document.createElement('td')
         tdEmail.innerText = data[item].seu_email
-        tr.append(tdEmail);
+        tr.append(tdEmail)
 
         const tdAddress = document.createElement('td')
         tdAddress.innerText = `${data[item].rua}, ${data[item].numero}
           ${data[item].complemento}, ${data[item].bairro} ${data[item].cep}
           ${data[item].cidade}-${data[item].uf}`
-        tr.append(tdAddress);
+        tr.append(tdAddress)
 
         const tdTel = document.createElement('td')
         tdTel.innerText = data[item].telefone
-        tr.append(tdTel);
+        tr.append(tdTel)
 
-
-        const deleteButton = "<button class='change-button'>Excluir</button>";
-        const changeButton = "<button class='delete-button'>Alterar</button>";
-        const tdAction = document.createElement('td');
-        tdAction.innerHTML = `${deleteButton} ${changeButton}`;
+        const deleteButton = "<button class='change-button'>Excluir</button>"
+        const changeButton = "<button class='delete-button'>Alterar</button>"
+        const tdAction = document.createElement('td')
+        tdAction.innerHTML = `${deleteButton} ${changeButton}`
         tr.append(tdAction)
-        
       }
     });
-};
+}
 
-getApiEficazInfos();
+getApiEficazInfos()

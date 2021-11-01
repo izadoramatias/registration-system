@@ -1,7 +1,7 @@
 // post request
+const url = "https://estagio.eficazmarketing.com/api/user";
 
 function submitDataToAPI(event) {
-  // event.preventDefault()
 
   let emailPessoal = document.getElementById('email-pessoal').value
   let email = document.getElementById('email').value
@@ -28,7 +28,7 @@ function submitDataToAPI(event) {
     uf: uf,
     cep: cep
   }
-  const url = "https://estagio.eficazmarketing.com/api/user"
+  
   console.log(dataBody)
 
   fetch(url, {
@@ -37,7 +37,7 @@ function submitDataToAPI(event) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(dataBody)
-  })
+  });
 
   const takeModal = document.querySelector(".modal");
   takeModal.style.visibility = "visible";

@@ -273,7 +273,6 @@ body{
   transform: rotate(48deg);
   border-radius: 20px 20px 20px 10px;
   background: #fff;
-  transition: .4s
 }
 
 .modal .check span::before{
